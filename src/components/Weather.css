@@ -1,0 +1,120 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif; /* Optional: set a global font */
+  text-transform: uppercase;
+}
+
+.weather-card {
+  background: linear-gradient(135deg, #81c3d7, #6aa2d1);
+  color: white;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.weather-card .card-body {
+  background: rgba(0, 0, 0, 0.5); /* Optional: add semi-transparent background to content for readability */
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 600px; /* Optional: set a max width for the card body */
+  margin: auto;
+}
+
+.weather-card .card-title {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.weather-card .weather-location {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.weather-card .weather-temp {
+  font-size: 2.5em;
+  margin: 10px 0;
+}
+
+.weather-card .weather-description {
+  text-transform: capitalize;
+}
+
+.weather-card .search-container {
+  display: flex;
+  flex-direction: column; /* Stack input and button vertically */
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.weather-card .search-container input {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%; /* Adjust width to fill available space */
+  max-width: 300px; /* Limit max width for larger screens */
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+.weather-card .search-container button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .weather-card .card-title {
+    font-size: 1.5em;
+  }
+
+  .weather-card .weather-location {
+    font-size: 1.2em;
+  }
+
+  .weather-card .weather-temp {
+    font-size: 2em;
+  }
+
+  .weather-card .search-container input,
+  .weather-card .search-container button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-card .card-title {
+    font-size: 1.2em;
+  }
+
+  .weather-card .weather-location {
+    font-size: 1em;
+  }
+
+  .weather-card .weather-temp {
+    font-size: 1.5em;
+  }
+
+  .weather-card .search-container input,
+  .weather-card .search-container button {
+    font-size: 12px;
+  }
+
+  .weather-card .search-container {
+    flex-direction: column;
+  }
+}
